@@ -92,6 +92,7 @@ video {
   --nav-gray: rgb(204, 204, 204);
   --bg-gray: rgb(255, 255, 255);
   --blue: rgb(1, 0, 245);
+  --light-blue: rgb(117, 251, 253);
   --red: rgb(239, 54, 39);
   --yellow: rgb(255, 255, 84);
   --orange: rgb(239, 142, 52);
@@ -99,16 +100,26 @@ video {
   --black: rgb(0, 0, 0);
 }
 
+body {
+  font-family: sans-serif;
+  background-color: var(--red);
+}
+
 div.home-container {
   background: url(home-background.jpg) center center fixed;
   background-size: cover;
   position: relative;
   min-height: 100vh;
+  max-width: 100em;
+  margin: auto;
 }
 
 div.container {
   position: relative;
   min-height: 100vh;
+  background-color: var(--white);
+  max-width: 100em;
+  margin: auto;
 }
 
 /* >>> IMPORTANT: you have to change the wrap the content of your home page (index) in a div with a class home-container to make it work. If you used a div with the class container on your home, you’ll only need to change the name of the class.  */
@@ -124,9 +135,8 @@ img {
 
 header {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr 5fr;
   background: var(--nav-gray);
-  /* fix padding */
   padding: 1em 0.5em;
 }
 
@@ -138,7 +148,6 @@ h2,
 h3,
 h4 {
   font-weight: bold;
-  font-family: sans-serif;
 }
 
 h2 {
@@ -161,7 +170,6 @@ nav ul {
 
 ul li {
   list-style-type: none;
-  font-family: sans-serif;
   margin: 0.2em 0em;
 }
 
@@ -182,7 +190,6 @@ main.menu ul li {
 
 p {
   margin: 1em 0em 0em;
-  font-family: sans-serif;
 }
 
 p.description {
@@ -208,7 +215,11 @@ nav ul li a {
   color: var(--yellow);
   background-color: var(--blue);
   padding: 0.3em 0.5em;
-  font-family: sans-serif;
+}
+
+nav ul li.selected a {
+  color: var(--white);
+  background-color: var(--orange);
 }
 
 p.slogan {
@@ -232,9 +243,36 @@ footer {
 address {
   color: var(--orange);
   margin: 0.1em 0em 0em;
-  font-family: sans-serif;
+}
+
+article {
+  background-color: var(--light-blue);
+  max-width: 35em;
+  margin: auto;
 }
 
 footer p {
   margin: 0;
+}
+
+/* styling for when the window is greater than 60em */
+@media screen and (min-width: 60em) {
+  nav ul li {
+    display: inline;
+    padding: 0.4em;
+  }
+
+  nav ul {
+    margin: 1.5em 0;
+  }
+
+  nav ul li a {
+    font-size: 2em;
+  }
+
+  main.menu ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 7em;
+  }
 }
