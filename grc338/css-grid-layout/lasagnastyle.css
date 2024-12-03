@@ -194,11 +194,11 @@ figcaption {
 }
 
 body {
-  background-color: var(--gray);
+  /* background-color: var(--gray); */
 }
 
 div.container {
   max-width: 90em;
   margin: auto;
-  background-color: var(--white);
+  /* background-color: var(--white); */
 }
