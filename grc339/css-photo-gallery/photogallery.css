@@ -54,6 +54,10 @@ input:nth-of-type(4):checked ~ main figure:nth-of-type(4) {
   opacity: 1;
 }
 
+/* input:checked + figure {
+  opacity: 1;
+} */
+
 nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
