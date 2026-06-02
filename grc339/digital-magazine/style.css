@@ -409,7 +409,10 @@ button:hover {
   }
 
   footer {
-    background-color: var(--blue-light);
+    background-color: var(--blue);
+  }
+
+  footer p {
     color: var(--white-light);
   }
 
